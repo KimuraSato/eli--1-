@@ -2,8 +2,8 @@ package com.senai.eli.Model;
 
 import java.time.LocalDate;
 import org.hibernate.annotations.ColumnDefault;
-import com.Telefone.Telefone;
 import com.senai.eli.Enum.Sexo;
+import com.senai.eli.Validator.Telefone.Telefone;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -42,5 +42,5 @@ public class Usuario {
 
     @Column(name = "nascimento", nullable = false)
     private LocalDate nascimento;
-    
+
 }

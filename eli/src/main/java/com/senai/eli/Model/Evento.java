@@ -69,6 +69,18 @@ public class Evento {
     @JoinTable(name = "evento_grupo")
     private List<GrupoTrabalho> grupos = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(name = "categorias")
+    private List<Categoria> categorias = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(name = "relatorios")
+    private List<Relatorio> relatorios = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(name = "participantes")
+    private List<Participante> participantes = new ArrayList<>();
+
     @Column(name = "data")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate data;
